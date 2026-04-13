@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="#000001" data-react-helmet="true" name="theme-color">
+    <meta content="Vrantus" property="og:title">
+    <meta content="Vrantus" name="title">
+    <meta content="Check out Vrantus and his music" property="og:description"> 
+    <meta content="Check out Vrantus and his music" name="description"> 
+    <meta name="image" content="/img/logo.webp">
+    <meta property="og:image" content="/img/logo.webp">
+    <link href="Vrantus_%20Homepage_files/main.css" rel="stylesheet">
+    <title>Vrantus: Homepage</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="header">
+    <a href="https://vrantus.chordsboy.com/" id="logo"><img src="Vrantus_%20Homepage_files/logo.webp"></a>
+    <div id="menu" onclick="document.getElementById('menu_options').style.opacity = 1 - parseInt(document.getElementById('menu_options').style.opacity); document.getElementById('menu_options').style.transform = 'translateX(' + (-100 - parseFloat(document.getElementById('menu_options').style.transform.slice(11, -2))) + '%)';">⋮</div>
+</div>
+<div id="menu_options" style="opacity: 1; transform: translateX(0%);">
+    <a href="https://vrantus.chordsboy.com/#">START</a><hr>
+    <a href="https://open.spotify.com/artist/2WO1mNvuya5l8AIKKkSy8F">MUSIC</a><hr>
+    <a href="dubplates/">DUBPLATES</a><hr>
+    <a href="socials/">SOCIALS</a><hr>
+</div>
+<script>
+    window.addEventListener("load", async()=>{
+        history.pushState(null, null, ' ');
+        window.addEventListener("hashchange", async function(){
+            history.pushState(null, null, ' ');
+        });
+
+        document.getElementById("menu_options").onclick = async function(event){
+            if(event.target.tagName !== "A"){
+                document.getElementById("menu").click();
+            }
+        };
+    });
+</script>
+</body></html>
